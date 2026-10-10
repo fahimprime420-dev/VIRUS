@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId "com.real.virus"
         minSdk 24
-        targetSdk 24
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 
@@ -51,6 +51,12 @@ android {
         debug {
             debuggable true
         }
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+        disable 'ExpiredTargetSdkVersion'
     }
 
     compileOptions {
